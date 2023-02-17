@@ -175,7 +175,7 @@
 		<!-- handled by the placeworker -->
 		<designationCategory>Power</designationCategory>
 		<placeWorkers>
-			<li>PlaceWorker_WatermillGenerator</li>
+			<li>VanillaPowerExpanded.PlaceWorker_AdvancedWatermill</li>
 		</placeWorkers>
 		<building>
 			<ai_chillDestination>false</ai_chillDestination>
