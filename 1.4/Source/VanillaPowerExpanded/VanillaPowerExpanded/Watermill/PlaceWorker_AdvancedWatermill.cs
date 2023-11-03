@@ -29,7 +29,7 @@ namespace VanillaPowerExpanded
         {
             foreach (IntVec3 c in CompPowerPlantWater.WaterCells(loc, rot))
             {
-                if (!map.terrainGrid.TerrainAt(c).affordances.Contains(TerrainAffordanceDefOf.MovingFluid))
+                if (!c.InBounds(map) || !map.terrainGrid.TerrainAt(c).affordances.Contains(TerrainAffordanceDefOf.MovingFluid))
                 {
                     return false;
                 }
