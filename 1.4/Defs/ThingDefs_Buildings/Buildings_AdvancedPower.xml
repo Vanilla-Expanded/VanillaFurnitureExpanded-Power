@@ -55,12 +55,18 @@
 				<transmitsPower>true</transmitsPower>
 			</li>
 			<li Class="CompProperties_Breakdownable"/>
+      <li>
+        <compClass>CompAutoCutWindTurbine</compClass>
+      </li>
 		</comps>
 		<designationHotKey>Misc7</designationHotKey>
 		<researchPrerequisites>
 			<li>VFE_AdvancedPowerSources</li>
 		</researchPrerequisites>
 		<constructionSkillPrerequisite>6</constructionSkillPrerequisite>
+    <inspectorTabs>
+      <li>ITab_WindTurbineAutoCut</li>
+    </inspectorTabs>
 	</ThingDef>
 
 	<ThingDef ParentName="BuildingBase">
