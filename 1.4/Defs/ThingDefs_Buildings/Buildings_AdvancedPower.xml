@@ -20,7 +20,7 @@
 		</graphicData>
 		<uiIconPath>Things/Building/Power/AdvancedWindTurbine/AdvancedWindTurbine_MenuIcon</uiIconPath>
 		<altitudeLayer>Building</altitudeLayer>
-		<passability>Impassable</passability>
+		<passability>PassThroughOnly</passability>
 		<blockWind>true</blockWind>
 		<fillPercent>0.5</fillPercent>
 		<statBases>
