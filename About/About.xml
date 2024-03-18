@@ -9,7 +9,7 @@
         <li>1.4</li>
 		<li>1.5</li>
     </supportedVersions>
-	<modIconPath>UI/VELogo</modIconPath>
+	<modIconPath IgnoreIfNoMatchingField="True">UI/VELogo</modIconPath>
 	<modDependencies>
 		<li>
 			<packageId>brrainz.harmony</packageId>
