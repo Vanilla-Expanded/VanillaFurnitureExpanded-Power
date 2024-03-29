@@ -13,6 +13,16 @@
     <prerequisites>
       <li>Electricity</li>
     </prerequisites>
+	<generalRules>
+  <rulesStrings>
+    <li>subject->the era of industrial power</li>
+    <li>subject_story->ushered in robust solutions to meet the growing energy demands of burgeoning industries</li>
+    <li>subject_story->developed generators with unparalleled fuel efficiency and output, powering the machinery of progress</li>
+    <li>subject_story->overcame the limitations of earlier power sources, setting the stage for an era of expansion and invention</li>
+    <li>subject_story->engineered durability and reliability into every unit, ensuring the wheels of industry never slow</li>
+    <li>subject_gerund->fueling the industrial revolution with advanced power generation</li>
+  </rulesStrings>
+</generalRules>
   </ResearchProjectDef>
   
   <ResearchProjectDef>
@@ -31,6 +41,16 @@
     </requiredResearchFacilities>
   <researchViewX>4.00</researchViewX>
   <researchViewY>4.30</researchViewY>
+  <generalRules>
+  <rulesStrings>
+    <li>subject->the capacitors of tomorrow</li>
+    <li>subject_story->broke new ground in energy storage, with batteries that hold the promise of tomorrow</li>
+    <li>subject_story->crafted compact yet powerful storage solutions, harnessing spacertech to leap forward in efficiency</li>
+    <li>subject_story->pioneered systems that safeguard against power fluctuations, securing energy for critical moments</li>
+    <li>subject_story->transformed the way civilizations store and manage their power, making energy scarcity a tale of the past</li>
+    <li>subject_gerund->storing the pulse of progress in advanced batteries</li>
+  </rulesStrings>
+</generalRules>
   </ResearchProjectDef>
   
   <ResearchProjectDef>
@@ -49,6 +69,16 @@
     </requiredResearchFacilities>
   <researchViewX>4.00</researchViewX>
   <researchViewY>3.55</researchViewY>
+  <generalRules>
+  <rulesStrings>
+    <li>subject->harvesting the elements</li>
+    <li>subject_story->harnessed the power of the sun and wind with unprecedented efficiency, through advanced solar panels and turbines</li>
+    <li>subject_story->elevated green power technologies to new heights, combining sustainability with high performance</li>
+    <li>subject_story->initiated a green revolution in energy production, reducing reliance on finite resources</li>
+    <li>subject_story->integrated smart technologies to optimize energy capture and utilization, even in the most challenging environments</li>
+    <li>subject_gerund->leading the charge towards a sustainable future with green power</li>
+  </rulesStrings>
+</generalRules>
   </ResearchProjectDef>
   
   <ResearchProjectDef>
@@ -67,6 +97,16 @@
     </requiredResearchFacilities>
   <researchViewX>6.00</researchViewX>
   <researchViewY>3.60</researchViewY>
+  <generalRules>
+  <rulesStrings>
+    <li>subject->the atomic frontier</li>
+    <li>subject_story->unlocked the atom's heart, unleashing a torrent of power sufficient to light cities and drive the engines of industry</li>
+    <li>subject_story->balanced the immense potential with rigorous safety protocols, ensuring the boon of nuclear power wasn't overshadowed by its risks</li>
+    <li>subject_story->catalyzed a shift in power generation, where the atom's quiet hum underpins the bustling life of civilizations</li>
+    <li>subject_story->led a scientific and engineering marvel, making nuclear power the cornerstone of a new era of energy sufficiency</li>
+    <li>subject_gerund->embracing the nucleus of progress with nuclear power</li>
+  </rulesStrings>
+</generalRules>
   </ResearchProjectDef>
   
   <ResearchProjectDef>
@@ -81,6 +121,16 @@
     </prerequisites>
   <researchViewX>4.00</researchViewX>
   <researchViewY>3.00</researchViewY>
+  <generalRules>
+  <rulesStrings>
+    <li>subject->the rhythm of the seas</li>
+    <li>subject_story->tapped into the ceaseless motion of the oceans, converting the tides into a vast, unending source of power</li>
+    <li>subject_story->innovated with underwater turbines that dance with the currents, generating clean energy in harmony with nature</li>
+    <li>subject_story->overcame the challenges of marine power generation, protecting ecosystems while harnessing their strength</li>
+    <li>subject_story->showcased the potential of the planet's largest renewable resource, leading by example in the pursuit of sustainability</li>
+    <li>subject_gerund->syncing civilization's heartbeat with the tides</li>
+  </rulesStrings>
+</generalRules>
   </ResearchProjectDef>
   
  
