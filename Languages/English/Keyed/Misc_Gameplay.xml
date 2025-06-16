@@ -88,6 +88,40 @@
 
 	<VPE_GasUpdateNoticeLetterLabel>Power Mod Update</VPE_GasUpdateNoticeLetterLabel>
 	<VPE_GasUpdateNoticeLetterText>The Vanilla Furniture Expanded: Power mod has been updated with a very important update regarding the Helixien Gas Network.\n\nThe original code was made by me (Sarg Bjornson) and it was quite sloppy, causing a lot of bugs and inconsistent behaviour. Thanks to the amazing Fluffy, the whole gas network code has been rewritten, and it should work perfectly now.\n\nNOTE: since most of the classes controlling the Gas Network have changed, you should re-make any gas network components you have on an existing save. You can replace buildings without cost by accessing dev mode and turning on God mode. Then simply deconstruct your current gas network (with all gas-based objects), and replace it, for free.</VPE_GasUpdateNoticeLetterText>
+	
+	<!-- Mod options -->
+	<VPE_Reset>Reset</VPE_Reset>
+	<VPE_NuclearPlantHeader>Nuclear Plant</VPE_NuclearPlantHeader>
+	<VPE_NuclearPlantMultiplier>Nuclear plant output multiplier</VPE_NuclearPlantMultiplier>
+	<VPE_NuclearPlantMultiplierTooltip>The amount of power produced by a nuclear plant will be multiplied by this amount.</VPE_NuclearPlantMultiplierTooltip>
+	<VPE_NuclearPlantRadiationMultiplier>Radiation radius multiplier</VPE_NuclearPlantRadiationMultiplier>
+	<VPE_NuclearPlantRadiationMultiplierTooltip>The radius of the radiation produced by the nuclear plant if fuel is over 50% or if in meltdown will be multiplied by this amount.</VPE_NuclearPlantRadiationMultiplierTooltip>
+	<VPE_DisableNuclearMeltdowns>Disable Nuclear Meltdowns</VPE_DisableNuclearMeltdowns>
+	<VPE_DisableNuclearMeltdownsDesc>If activated, nuclear plants won't ever meltdown, even if reaching critical temperature.</VPE_DisableNuclearMeltdownsDesc>
+	
+	<VPE_SolarHeader>Advanced Solar</VPE_SolarHeader>
+	<VPE_AdvSolarOutputMultiplier>Adv. Solar output multiplier</VPE_AdvSolarOutputMultiplier>
+	<VPE_AdvSolarOutputMultiplierTooltip>The amount of power produced by an advanced solar generator will be multiplied by this amount.</VPE_AdvSolarOutputMultiplierTooltip>
+	
+	<VPE_SoulHeader>Archotech violence generator</VPE_SoulHeader>
+	<VPE_SoulMultiplier>Hours of power per corpse consumed</VPE_SoulMultiplier>
+	<VPE_SoulMultiplierDesc>By default, every corpse consumed by the reactor produces 2 hours of power. This will be multiplied by this factor.</VPE_SoulMultiplierDesc>
+	
+	<VPE_TidalHeader>Tidal generator</VPE_TidalHeader>
+	<VPE_TidalMultiplier>Tidal generator output multiplier</VPE_TidalMultiplier>
+	<VPE_TidalMultiplierDesc>The amount of power produced by a tidal generator will be multiplied by this amount.</VPE_TidalMultiplierDesc>
+	<VPE_TidalSeparation>Tidal generator separation</VPE_TidalSeparation>
+	<VPE_TidalSeparationDesc>By default tidal generators need 40 tiles between them, but this can be changed with this setting.</VPE_TidalSeparationDesc>
+	
+	<VPE_WindmillHeader>Advanced wind turbine</VPE_WindmillHeader>
+	<VPE_AdvWindmillOutputMultiplier>Advanced wind turbine output multiplier</VPE_AdvWindmillOutputMultiplier>
+	<VPE_AdvWindmillOutputMultiplierDesc>The amount of power produced by an advanced wind turbine will be multiplied by this amount.</VPE_AdvWindmillOutputMultiplierDesc>
 
+	<VPE_WatermillHeader>Advanced watermill generator</VPE_WatermillHeader>
+	<VPE_AdvWatermillOutputMultiplier>Advanced watermill generator output multiplier</VPE_AdvWatermillOutputMultiplier>
+	<VPE_AdvWatermillOutputMultiplierDesc>The amount of power produced by an advanced watermill generator will be multiplied by this amount.</VPE_AdvWatermillOutputMultiplierDesc>
 
+	<VPE_AdvGeoHeader>Advanced geothermal generator</VPE_AdvGeoHeader>
+	<VPE_AdvGeoOutputMultiplier>Advanced geothermal generator output multiplier</VPE_AdvGeoOutputMultiplier>
+	<VPE_AdvGeoOutputMultiplierDesc>The amount of power produced by an advanced geothermal generator will be multiplied by this amount.</VPE_AdvGeoOutputMultiplierDesc>
 </LanguageData>
