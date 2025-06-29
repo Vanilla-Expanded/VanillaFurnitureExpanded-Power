@@ -105,23 +105,23 @@
 	
 	<VPE_SoulHeader>Archotech violence generator</VPE_SoulHeader>
 	<VPE_SoulMultiplier>Hours of power per corpse consumed</VPE_SoulMultiplier>
-	<VPE_SoulMultiplierDesc>By default, every corpse consumed by the reactor produces 2 hours of power. This will be multiplied by this factor.</VPE_SoulMultiplierDesc>
+	<VPE_SoulMultiplierTooltip>By default, every corpse consumed by the reactor produces 2 hours of power. This will be multiplied by this factor.</VPE_SoulMultiplierTooltip>
 	
 	<VPE_TidalHeader>Tidal generator</VPE_TidalHeader>
 	<VPE_TidalMultiplier>Tidal generator output multiplier</VPE_TidalMultiplier>
-	<VPE_TidalMultiplierDesc>The amount of power produced by a tidal generator will be multiplied by this amount.</VPE_TidalMultiplierDesc>
+	<VPE_TidalMultiplierTooltip>The amount of power produced by a tidal generator will be multiplied by this amount.</VPE_TidalMultiplierTooltip>
 	<VPE_TidalSeparation>Tidal generator separation</VPE_TidalSeparation>
-	<VPE_TidalSeparationDesc>By default tidal generators need 40 tiles between them, but this can be changed with this setting.</VPE_TidalSeparationDesc>
+	<VPE_TidalSeparationTooltip>By default tidal generators need 40 tiles between them, but this can be changed with this setting.</VPE_TidalSeparationTooltip>
 	
 	<VPE_WindmillHeader>Advanced wind turbine</VPE_WindmillHeader>
 	<VPE_AdvWindmillOutputMultiplier>Advanced wind turbine output multiplier</VPE_AdvWindmillOutputMultiplier>
-	<VPE_AdvWindmillOutputMultiplierDesc>The amount of power produced by an advanced wind turbine will be multiplied by this amount.</VPE_AdvWindmillOutputMultiplierDesc>
+	<VPE_AdvWindmillOutputMultiplierTooltip>The amount of power produced by an advanced wind turbine will be multiplied by this amount.</VPE_AdvWindmillOutputMultiplierTooltip>
 
 	<VPE_WatermillHeader>Advanced watermill generator</VPE_WatermillHeader>
 	<VPE_AdvWatermillOutputMultiplier>Advanced watermill generator output multiplier</VPE_AdvWatermillOutputMultiplier>
-	<VPE_AdvWatermillOutputMultiplierDesc>The amount of power produced by an advanced watermill generator will be multiplied by this amount.</VPE_AdvWatermillOutputMultiplierDesc>
+	<VPE_AdvWatermillOutputMultiplierTooltip>The amount of power produced by an advanced watermill generator will be multiplied by this amount.</VPE_AdvWatermillOutputMultiplierTooltip>
 
 	<VPE_AdvGeoHeader>Advanced geothermal generator</VPE_AdvGeoHeader>
 	<VPE_AdvGeoOutputMultiplier>Advanced geothermal generator output multiplier</VPE_AdvGeoOutputMultiplier>
-	<VPE_AdvGeoOutputMultiplierDesc>The amount of power produced by an advanced geothermal generator will be multiplied by this amount.</VPE_AdvGeoOutputMultiplierDesc>
+	<VPE_AdvGeoOutputMultiplierTooltip>The amount of power produced by an advanced geothermal generator will be multiplied by this amount.</VPE_AdvGeoOutputMultiplierTooltip>
 </LanguageData>
