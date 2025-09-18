@@ -11,6 +11,9 @@ namespace VanillaPowerExpanded
     [StaticConstructorOnStartup]
     public class CompPowerAdvancedWind : CompPowerPlant
     {
+
+        private bool blockedDueToInOrbit;
+
         protected override float DesiredPowerOutput
         {
             get
@@ -57,7 +60,11 @@ namespace VanillaPowerExpanded
                 this.ticksSinceWeatherUpdate = 0;
                 this.cachedPowerOutput = -(base.Props.PowerConsumption * num);
                 this.RecalculateBlockages();
-                if (this.windPathBlockedCells.Count > 0)
+                if (blockedDueToInOrbit)
+                {
+                    cachedPowerOutput = 0f;
+                }
+                else if(this.windPathBlockedCells.Count > 0)
                 {
                     float num2 = 0f;
                     for (int i = 0; i < this.windPathBlockedCells.Count; i++)
@@ -147,6 +154,7 @@ namespace VanillaPowerExpanded
             }
             this.windPathBlockedCells.Clear();
             this.windPathBlockedByThings.Clear();
+            blockedDueToInOrbit = parent.Map.Biome.inVacuum;
             for (int i = 0; i < this.windPathCells.Count; i++)
             {
                 IntVec3 intVec = this.windPathCells[i];
