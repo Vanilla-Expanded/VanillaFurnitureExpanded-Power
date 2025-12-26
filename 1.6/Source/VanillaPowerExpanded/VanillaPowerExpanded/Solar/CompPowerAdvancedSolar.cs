@@ -12,7 +12,7 @@ namespace VanillaPowerExpanded
         {
             get
             {
-                return Mathf.Lerp(0f, FullSunPower, this.parent.Map.skyManager.CurSkyGlow) * this.RoofedPowerOutputFactor *VanillaPowerExpanded_Settings.advSolarOutputMultiplier;
+                return Mathf.Lerp(0f, FullSunPower, this.parent.Map.skyManager.CurSkyGlow) * this.RoofedPowerOutputFactor *VanillaPowerExpanded_Settings.advSolarOutputMultiplier * MultiplySolarOutput();
             }
         }
 
@@ -40,7 +40,7 @@ namespace VanillaPowerExpanded
             GenDraw.FillableBarRequest r = default(GenDraw.FillableBarRequest);
             r.center = this.parent.DrawPos + Vector3.up * 0.1f;
             r.size = BarSize;
-            r.fillPercent = base.PowerOutput / (FullSunPower * VanillaPowerExpanded_Settings.advSolarOutputMultiplier);
+            r.fillPercent = base.PowerOutput / (FullSunPower * VanillaPowerExpanded_Settings.advSolarOutputMultiplier * MultiplySolarOutput());
             r.filledMat = PowerPlantSolarBarFilledMat;
             r.unfilledMat = PowerPlantSolarBarUnfilledMat;
             r.margin = 0.15f;
@@ -48,6 +48,22 @@ namespace VanillaPowerExpanded
             rotation.Rotate(RotationDirection.Clockwise);
             r.rotation = rotation;
             GenDraw.DrawFillableBar(r);
+        }
+
+        public float MultiplySolarOutput()
+        {
+            Map map = parent.Map;
+            float multiplier = 1;
+            if (map.Tile.Tile.Mutators.Contains(InternalDefOf.VEE_MoreSolarPower))
+            {
+                multiplier = 1.25f;
+            }
+            if (map.Tile.Tile.Mutators.Contains(InternalDefOf.VEE_LessSolarPower))
+            {
+                multiplier = 0.75f;
+            }
+
+            return multiplier;
         }
 
         private const float FullSunPower = 3000f;

@@ -294,9 +294,14 @@
       <HintPath>..\..\..\..\..\..\RimWorldWin64_Data\Managed\UnityEngine.XRModule.dll</HintPath>
       <Private>False</Private>
     </Reference>
+    <Reference Include="VEF">
+      <HintPath>..\..\..\..\..\VanillaExpandedFramework\1.6\Assemblies\VEF.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Batteries\Building_SmallBattery.cs" />
+    <Compile Include="DefOfs\InternalDefOf.cs" />
     <Compile Include="Geothermal\CompPowerPlantAdvSteam.cs" />
     <Compile Include="Graphics\GraphicsCache.cs" />
     <Compile Include="Nuclear\CompPlantHarmRadiusIfBroken.cs" />
