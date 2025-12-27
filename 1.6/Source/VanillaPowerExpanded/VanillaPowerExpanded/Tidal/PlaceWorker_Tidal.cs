@@ -17,7 +17,7 @@ namespace VanillaPowerExpanded
                     return new AcceptanceReport("VPE_NeedsWater".Translate());
                 }
             }
-            foreach (Thing generator in GenRadial.RadialDistinctThingsAround(loc, map, 40, true))
+            foreach (Thing generator in GenRadial.RadialDistinctThingsAround(loc, map, VanillaPowerExpanded_Settings.tidalSeparation, true))
             {
                 Building generatorBuilding = generator as Building;
                 if (generatorBuilding != null && generatorBuilding.def.defName == "VFE_TidalGenerator")
