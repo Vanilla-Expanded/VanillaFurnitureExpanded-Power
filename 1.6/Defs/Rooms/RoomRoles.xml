@@ -5,7 +5,7 @@
   
   <RoomRoleDef>
     <defName>VPE_ReactorRoom</defName>
-    <label>Reactor Room</label>
+    <label>Reactor room</label>
     <workerClass>VanillaPowerExpanded.RoomRoleWorker_ReactorRoom</workerClass>
     <relatedStats>
       <li>Cleanliness</li>
