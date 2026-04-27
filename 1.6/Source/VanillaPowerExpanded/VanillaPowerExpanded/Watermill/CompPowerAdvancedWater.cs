@@ -3,12 +3,15 @@ using System.Collections.Generic;
 using UnityEngine;
 using Verse;
 using RimWorld;
+using VEF.Maps;
 
 namespace VanillaPowerExpanded
 {
     [StaticConstructorOnStartup]
     public class CompPowerAdvancedWater : CompPowerPlant
     {
+        public float cachedGameConditionMultiplier = 1;
+
         protected override float DesiredPowerOutput
         {
             get
@@ -23,9 +26,9 @@ namespace VanillaPowerExpanded
                 }
                 if (this.waterDoubleUsed)
                 {
-                    return base.DesiredPowerOutput * 0.3f * VanillaPowerExpanded_Settings.advWatermillOutputMultiplier;
+                    return base.DesiredPowerOutput * 0.3f * VanillaPowerExpanded_Settings.advWatermillOutputMultiplier * cachedGameConditionMultiplier;
                 }
-                return base.DesiredPowerOutput * VanillaPowerExpanded_Settings.advWatermillOutputMultiplier;
+                return base.DesiredPowerOutput * VanillaPowerExpanded_Settings.advWatermillOutputMultiplier * cachedGameConditionMultiplier;
             }
         }
 
@@ -109,7 +112,26 @@ namespace VanillaPowerExpanded
             {
                 this.spinPosition = (this.spinPosition + 0.006666667f * this.spinRate + 6.28318548f) % 6.28318548f;
             }
+            if (parent.IsHashIntervalTick(2000))
+            {
+                cachedGameConditionMultiplier = 1;
+                if (parent.Map != null)
+                {
+                    if (parent.Map.gameConditionManager.ActiveConditions.Count > 0)
+                    {
+                        foreach (GameCondition condition in parent.Map.gameConditionManager.ActiveConditions)
+                        {
+                            MapConditionExtension extension = condition.def.GetModExtension<MapConditionExtension>();
+                            if (extension != null)
+                            {
+                                cachedGameConditionMultiplier *= extension.watermillStrengthMultiplier;
+                            }
+                        }
+                    }
+                }
+            }
         }
+
 
         public IEnumerable<IntVec3> WaterCells()
         {

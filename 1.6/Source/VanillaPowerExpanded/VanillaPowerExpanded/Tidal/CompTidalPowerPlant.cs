@@ -7,6 +7,7 @@ using VEF.Maps;
 using VEF.AestheticScaling;
 using VEF.Things;
 using Verse.Noise;
+using VEF;
 
 namespace VanillaPowerExpanded
 {
@@ -14,27 +15,29 @@ namespace VanillaPowerExpanded
     public class CompTidalPowerPlant : CompPowerPlant
     {
 
-        public float cachedMultiplier = -1;
+        public float cachedMutatorMultiplier = -1;
+        public float cachedGameConditionMultiplier = 1;
 
-        public float GetTideMultiplier
+        public float GetMutatorTideMultiplier
         {
             get
             {
-                if(cachedMultiplier == -1 && this.parent.Map!=null)
+                if(cachedMutatorMultiplier == -1 && parent.Map!=null)
                 {
-                    cachedMultiplier = 1;
-                    foreach (TileMutatorDef mutator in this.parent.Map.Tile.Tile.Mutators)
+                    cachedMutatorMultiplier = 1;
+                    foreach (TileMutatorDef mutator in parent.Map.Tile.Tile.Mutators)
                     {
                         TileMutatorExtension extension = mutator.GetModExtension<TileMutatorExtension>();
 
                         if (extension != null && extension.tideStrengthMultiplier != 1)
                         {
-                            cachedMultiplier *= extension.tideStrengthMultiplier;
+                            cachedMutatorMultiplier *= extension.tideStrengthMultiplier;
                         }
 
                     }
+
                 }
-                return cachedMultiplier;
+                return cachedMutatorMultiplier;
             }
 
         }
@@ -44,11 +47,38 @@ namespace VanillaPowerExpanded
             get
             {
 
-                return base.DesiredPowerOutput * VanillaPowerExpanded_Settings.tidalOutputMultiplier * GetTideMultiplier;
+                return base.DesiredPowerOutput * VanillaPowerExpanded_Settings.tidalOutputMultiplier * GetMutatorTideMultiplier * cachedGameConditionMultiplier;
             }
         }
 
-       
+        public override void CompTickInterval(int delta)
+        {
+            base.CompTickInterval(delta);
+            if (parent.IsHashIntervalTick(2000 * delta))
+            {
+                if (parent.Map != null) {
+                    if (parent.Map.gameConditionManager.ActiveConditions.Count > 0)
+                    {
+                        foreach(GameCondition condition in parent.Map.gameConditionManager.ActiveConditions)
+                        {
+                            MapConditionExtension extension = condition.def.GetModExtension<MapConditionExtension>();
+                            if (extension != null)
+                            {
+                                cachedGameConditionMultiplier *= extension.tideStrengthMultiplier;
+                            }
+
+                        }
+
+
+                    }
+
+
+                }
+
+            }
+        }
+
+
 
     }
 }
